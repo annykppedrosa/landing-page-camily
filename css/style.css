@@ -1,257 +1,519 @@
-/* Reset simples */
-*{
-	box-sizing:border-box;
-	margin:0;
-	padding:0
+:root {
+	--bg: #f3f1ef;
+	--white: #ffffff;
+	--ink: #2c2c2c;
+	--muted: #6d6d6d;
+	--line: #e6e3df;
+	--band: #e4e2df;
+	--circle: #e5e3e0;
+	--button: #3a3a3a;
+	--header: 76px;
+	--serif: "Cormorant Garamond", Georgia, serif;
+	--sans: Outfit, "Segoe UI", sans-serif;
 }
 
-html{
-	scroll-behavior:smooth
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-body{
-	font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-	line-height:1.6;
-	color:#222;
-	background:#c0bfc0
-	}
-
-.container{
-	max-width:900px;
-	margin:0 auto;
-	padding:0 1rem
+html {
+	scroll-behavior: smooth;
 }
 
-/* Foto de perfil */
-.profile-wrap{
-	display:flex;
+body {
+	font-family: var(--sans);
+	font-weight: 400;
+	line-height: 1.6;
+	color: var(--ink);
+	background: var(--bg);
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	color: inherit;
+}
+
+.container {
+	width: min(1080px, calc(100% - 2.5rem));
+	margin: 0 auto;
+}
+
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+	background: var(--white);
+	border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+	display: flex;
 	align-items: center;
-	justify-content: flex-start;
-	gap:50px; /* distância entre foto e frase */
-	padding:2rem 0;
-	margin-bottom:1rem
+	min-height: var(--header);
+	gap: 1.5rem;
 }
 
-.profile-photo{
-	width:300px;
-	height:300px;
-	border-radius:50%;
-	min-width:300px; /* impede a foto de diminuir */
-	object-fit:cover;
-	border:4px solid #fff;
-	box-shadow:0 6px 18px rgba(0,0,0,0.08)
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	text-decoration: none;
+	color: var(--ink);
+	padding-right: 1.25rem;
+	border-right: 1px solid var(--line);
 }
 
-.mensagem{
-	max-width:500px; /* controla o tamanho da área da frase */
-	font-size:24px;
-	line-height:1.5;
-	color:#333;
-	margin:0;
-
+.brand-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.15;
 }
 
-/* Redimensiona a foto em telas bem pequenas (celulares) */
-@media (max-width:420px){
-	.profile-photo{
-		width:120px;height:120px
+.brand-name,
+.hero-name {
+	font-family: var(--serif);
+	font-weight: 500;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.brand-name {
+	font-size: 0.95rem;
+}
+
+.brand-meta,
+.hero-role,
+.kicker {
+	font-size: 0.68rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.logo-crop {
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	overflow: hidden;
+	flex-shrink: 0;
+	display: block;
+}
+
+.logo-crop img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.logo-crop-lg {
+	width: 148px;
+	height: 148px;
+	margin-bottom: 1.15rem;
+}
+
+.menu-toggle {
+	display: none;
+	margin-left: auto;
+	background: transparent;
+	border: 0;
+	font-size: 1.4rem;
+	line-height: 1;
+	cursor: pointer;
+	color: var(--ink);
+}
+
+.nav-links {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	margin-left: auto;
+}
+
+.nav-links a {
+	text-decoration: none;
+	font-size: 0.95rem;
+	font-weight: 400;
+	color: #3a3a3a;
+	padding: 0.25rem 0;
+}
+
+.nav-links a:hover {
+	color: #111;
+}
+
+.hero {
+	position: relative;
+	padding: calc(var(--header) + 3.5rem) 0 4.5rem;
+	overflow: hidden;
+}
+
+.hero-circle {
+	position: absolute;
+	width: min(620px, 58vw);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: var(--circle);
+	right: -6%;
+	top: 40%;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.hero-grid {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: minmax(280px, 0.9fr) minmax(260px, 1.1fr);
+	align-items: center;
+	gap: 2rem;
+}
+
+.hero-name {
+	font-size: 1.35rem;
+}
+
+.hero-role {
+	margin-top: 0.35rem;
+}
+
+.kicker {
+	margin-top: 2rem;
+}
+
+.hero h1 {
+	font-family: var(--serif);
+	font-weight: 500;
+	font-size: clamp(1.85rem, 2.7vw, 2.45rem);
+	line-height: 1.22;
+	letter-spacing: -0.01em;
+	max-width: 16em;
+	margin: 0.85rem 0 1.6rem;
+}
+
+.hero-photo {
+	display: flex;
+	justify-content: center;
+	transform: translateY(-10%);
+}
+
+.hero-photo img {
+	width: min(460px, 100%);
+	height: 560px;
+	object-fit: cover;
+	object-position: center 36%;
+	-webkit-mask-image: radial-gradient(ellipse 72% 78% at 50% 46%, #000 55%, transparent 78%);
+	mask-image: radial-gradient(ellipse 72% 78% at 50% 46%, #000 55%, transparent 78%);
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
+	border-radius: 999px;
+	padding: 0.72rem 1.35rem;
+	font-family: var(--sans);
+	font-size: 0.95rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-outline {
+	background: var(--white);
+	color: var(--button);
+	border: 1px solid #d5d2ce;
+}
+
+.btn-outline:hover {
+	background: var(--button);
+	color: var(--white);
+	border-color: var(--button);
+}
+
+.btn-solid {
+	background: var(--button);
+	color: var(--white);
+	border: 1px solid var(--button);
+}
+
+.btn-solid:hover {
+	background: #222;
+	border-color: #222;
+}
+
+.btn:disabled {
+	opacity: 0.7;
+	cursor: default;
+}
+
+.about {
+	padding: 1rem 0 3.5rem;
+}
+
+.about-grid {
+	display: grid;
+	grid-template-columns: 1.3fr 0.7fr;
+	align-items: center;
+	gap: 2rem;
+}
+
+.about h2,
+.help h2,
+.contact-band h2 {
+	font-family: var(--serif);
+	font-weight: 500;
+	font-size: clamp(2.4rem, 4vw, 3.3rem);
+	line-height: 1.1;
+}
+
+.about p {
+	max-width: 34rem;
+	margin-top: 1rem;
+	font-size: 1.05rem;
+	color: #3f3f3f;
+}
+
+.leaf {
+	width: min(220px, 100%);
+	justify-self: end;
+	color: #c8c5c0;
+}
+
+.leaf path {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.2;
+	stroke-linejoin: round;
+}
+
+.help {
+	padding: 1rem 0 4.5rem;
+}
+
+.help h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.help-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
+}
+
+.help-card {
+	background: var(--white);
+	border: 1px solid var(--line);
+	border-radius: 18px;
+	padding: 2.1rem 1.4rem 1.8rem;
+	text-align: center;
+	box-shadow: 0 8px 24px rgba(40, 36, 32, 0.04);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.help-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 30px rgba(40, 36, 32, 0.08);
+}
+
+.help-card svg {
+	width: 46px;
+	height: 46px;
+	color: #8a8a8a;
+}
+
+.help-card svg path,
+.help-card svg circle {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 1.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.help-card svg circle.dot {
+	fill: currentColor;
+	stroke: none;
+}
+
+.help-card h3 {
+	font-family: var(--serif);
+	font-weight: 500;
+	font-size: 1.55rem;
+	margin: 0.9rem 0 0.45rem;
+}
+
+.help-card p {
+	color: var(--muted);
+	font-size: 0.96rem;
+}
+
+.contact {
+	padding: 0 0 4rem;
+}
+
+.contact-band {
+	position: relative;
+	overflow: hidden;
+	background: var(--band);
+	border-radius: 28px;
+	text-align: center;
+	padding: 3.5rem 1.5rem 3.2rem;
+}
+
+.contact-band h2 {
+	position: relative;
+}
+
+.contact-band p {
+	position: relative;
+	max-width: 34rem;
+	margin: 0.85rem auto 0;
+	color: #4a4a4a;
+}
+
+.leaf-band {
+	position: absolute;
+	left: -10px;
+	bottom: -30px;
+	width: 180px;
+	opacity: 0.85;
+	pointer-events: none;
+}
+
+.address {
+	margin-top: 1.25rem;
+	text-align: center;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.site-footer {
+	padding: 0.5rem 0 2.2rem;
+}
+
+.footer-row {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footer-row p {
+	color: var(--muted);
+	font-size: 0.92rem;
+	white-space: nowrap;
+}
+
+.footer-rule {
+	flex: 1;
+	height: 1px;
+	background: #ddd9d4;
+}
+
+.js .reveal {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js .reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+#inicio,
+#sobre-mim,
+#como-posso-te-ajudar,
+#contato {
+	scroll-margin-top: calc(var(--header) + 16px);
+}
+
+@media (max-width: 800px) {
+	.brand {
+		border-right: 0;
+		padding-right: 0;
+	}
+
+	.menu-toggle {
+		display: block;
+	}
+
+	.nav-links {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.85rem;
+		margin-left: 0;
+		padding: 0.4rem 1.25rem 1.15rem;
+		background: var(--white);
+		border-bottom: 1px solid var(--line);
+	}
+
+	.nav-links.open {
+		display: flex;
+	}
+
+	.hero-grid,
+	.about-grid,
+	.help-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.hero {
+		padding-top: calc(var(--header) + 2rem);
+	}
+
+	.hero-circle {
+		width: 320px;
+		right: -80px;
+		top: auto;
+		bottom: 20px;
+		transform: none;
+	}
+
+	.hero-photo img {
+		height: 420px;
+	}
+
+	.leaf {
+		justify-self: start;
+		width: 140px;
+	}
+
+	.footer-row p {
+		white-space: normal;
+		text-align: center;
 	}
 }
 
-/* Cabeçalho fixo no topo */
-.site-header{
-	background:#fff;
-	position:fixed;
-	top:0;
-	left:0;
-	right:0;
-	border-bottom:1px solid #eee;
-	z-index:50
-}
-
-/* Barra de navegação interna */
-.navbar{
-	display:flex;
-	align-items:center;
-	justify-content:space-between;
-	padding:0.75rem 0
-}
-
-/* Link da Logo */
-.logo{
-	font-weight:700;
-	text-decoration:none;
-	color:#111
-}
-
-/* Lista de links do menu */
-.nav-links{
-	list-style:none;
-	display:flex;
-	gap:1rem
-}
-
-/* Cada link individual do menu */
-.nav-links a{
-	color:#333;
-	text-decoration:none;
-	padding:0.25rem 0.5rem;
-	border-radius:4px
-}
-
-/* Efeito ao passar o mouse nos links */
-.nav-links a:hover{
-	background:#f0f0f0
-}
-
-/* Botão do menu hambúrguer (oculto no computador) */
-.menu-toggle{
-	display:none;
-	background:transparent;
-	border:0;
-	font-size:1.25rem
-}
-
-/* Espaço para header fixo */
-main{
-	padding-top:76px
-}
-
-/* Seções com blocos brancos */
-.section{
-	padding:2rem;
-	border-radius:14px;
-	background:#fff;
-	border:1px solid #f0e9ef;
-	margin-bottom:1.25rem;
-	box-shadow:0 6px 18px rgba(16,12,20,0.04);
-	scroll-margin-top:96px
-}
-
-.section h2{
-	margin-bottom:0.75rem
-}
-
-.projects{
-	list-style:disc;
-	margin-left:1.25rem
-}
-
-/* Formulário de contato */
-.field{
-	margin-bottom:1rem;
-	display:flex;
-	flex-direction:column
-}
-
-.field label{
-	margin-bottom:0.25rem;
-	font-weight:600
-}
-
-.field input,
-.field textarea{
-	padding:0.5rem;
-	border:1px solid #ccc;
-	border-radius:6px;
-	font-size:1rem
-}
-
-/* Estado de foco nos campos */
-.field input:focus,
-.field textarea:focus{
-	outline:none;
-	border-color:#6aa0ff;
-	box-shadow:0 0 0 3px rgba(102,153,255,0.12)
-}
-
-/* Mensagem de erro do formulário */
-.error{
-	color:#c0392b;
-	font-size:0.95rem;
-	margin-top:0.25rem;
-	min-height:1.1em
-}
-
-/* Botão de envio */
-button#submitBtn{
-	background:#0066cc;
-	color:#fff;
-	border:0;
-	padding:0.6rem 1rem;
-	border-radius:6px;
-	cursor:pointer
-}
-
-/* Botão desativado durante o envio */
-button#submitBtn:disabled{
-	opacity:0.7;
-	cursor:default
-}
-
-/* Status do envio do formulário */
-.form-status{
-	margin-top:0.75rem;
-	color:#117a37
-}
-
-/* Rodapé */
-.site-footer{
-	padding:1rem 0;
-	text-align:center;
-	color:#666;
-	background:#fafafa;
-	margin-top:2rem
-}
-
-/* --- DESIGN RESPONSIVO (Celular/Tablet) --- */
-@media (max-width:700px){
-	.nav-links{
-		display:none;
-		flex-direction:column;
-		background:#fff;
-		position:absolute;
-		left:0;
-		right:0;
-		top:100%;
-		padding:0.5rem 1rem;
-		border-bottom:1px solid #eee
-	}
-	
-	/* Classe que o JS vai colocar para abrir o menu */
-	.nav-links.open{
-		display:flex
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
 	}
 
-	/* Mostra as barrinhas do menu hambúrguer no celular */
-	.menu-toggle{
-		display:block
+	.js .reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
 	}
-	
-	.container{
-		padding-left:1rem;
-		padding-right:1rem
-	}
-}
 
-/* --- DESIGN RESPONSIVO (Computador) --- */
-@media (min-width:701px){
-	.nav-links{
-		display:flex
+	.btn,
+	.help-card {
+		transition: none;
 	}
-	
-	.menu-toggle{
-		display:none
-	}
-}
-
-/* Links em geral */
-a{
-	color:#0066cc
-}
-
-/* Alinhamento dos pontos em formação*/
-.section ul {
-    padding-left: 0;
-    list-style-position: inside;
 }

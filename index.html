@@ -1,104 +1,144 @@
-
 <!doctype html>
 <html lang="pt-BR">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Psicóloga Camily Pedrosa</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<!-- Cabeçalho fixo com navegação por âncoras -->
 		<header class="site-header">
 			<nav class="navbar container">
-				<a class="logo" href="#">Psicóloga Camily Pedrosa - CRP15/8723</a>
+				<a class="brand" href="#inicio">
+					<span class="logo-crop">
+						<img src="assets/logo-mark.jpeg" alt="" />
+					</span>
+					<span class="brand-text">
+						<span class="brand-name">Camily Pedrosa</span>
+						<span class="brand-meta">Psicóloga | CRP 15/8723</span>
+					</span>
+				</a>
 				<button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
 				<ul class="nav-links">
-					<li><a href="#início">Início</a></li>
+					<li><a href="#inicio">Início</a></li>
 					<li><a href="#sobre-mim">Sobre mim</a></li>
-					<li><a href="#como-posso-te-ajudar"></a>Como posso te ajudar?</a></li>
+					<li><a href="#como-posso-te-ajudar">Como posso te ajudar</a></li>
 					<li><a href="#contato">Contato</a></li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<!-- Seção: Início -->
-			<section id="Início" class="section container">
-				<h2>Início</h2>
-				<div class="profile-wrap container">
-					<img src="assets/Camily.jpeg" alt="Foto de perfil de Camily Pedrosa" class="profile-photo" />
-					<p class="mensagem">
-						Acredito que construir uma vida significativa não significa viver sem dor, mas permitir que os seus valores conduzam os seus passos.
-					</p>
+			<section id="inicio" class="hero">
+				<div class="hero-circle" aria-hidden="true"></div>
+				<div class="container hero-grid">
+					<div class="hero-copy reveal">
+						<span class="logo-crop logo-crop-lg">
+							<img src="assets/logo-mark.jpeg" alt="" />
+						</span>
+						<p class="hero-name">Camily Pedrosa</p>
+						<p class="hero-role">Psicóloga | CRP 15/8723</p>
+						<p class="kicker">Psicologia · cuidado e escuta</p>
+						<h1>
+							Acredito que construir uma vida significativa não significa viver sem dor, mas permitir que os seus valores conduzam os seus passos.
+						</h1>
+						<a class="btn btn-outline" href="#como-posso-te-ajudar">Conheça meu trabalho <span aria-hidden="true">→</span></a>
+					</div>
+					<div class="hero-photo">
+						<img src="assets/Camily.jpeg" alt="Camily Pedrosa, psicóloga" />
+					</div>
 				</div>
 			</section>
 
-			<!-- Seção: Sobre mim -->
-			<section id="sobre mim" class="section container">
-				<h2>Sobre mim</h2>
-				<p>Sou psicóloga formada pela [Universidade]. Tenho experiência em [área de atuação] e me dedico a ajudar pessoas a superarem desafios emocionais e psicológicos.</p>
+			<section id="sobre-mim" class="about">
+				<div class="container about-grid">
+					<div class="reveal">
+						<h2>Sobre mim</h2>
+						<p>
+							Um espaço de escuta, acolhimento e reflexão, respeitando a singularidade de cada pessoa e sua própria trajetória.
+						</p>
+					</div>
+					<svg class="leaf" viewBox="0 0 220 260" aria-hidden="true">
+						<path d="M36 236c28-46 52-86 118-168" />
+						<path d="M78 188c16-6 28 2 36-12 8-12-4-22-20-18-10 2-16 14-16 30z" />
+						<path d="M96 160c18-8 34 0 42-16 8-14-6-24-24-18-12 4-18 16-18 34z" />
+						<path d="M114 128c16-10 32-2 40-18 6-14-8-22-24-16-12 4-18 16-16 34z" />
+						<path d="M70 168c-16-2-26-16-20-28 6-10 20-8 28 4 6 8 4 18-8 24z" />
+						<path d="M92 132c-18 0-28-14-22-26 6-10 22-8 30 4 6 10 4 18-8 22z" />
+						<path d="M128 96c14-12 32-6 38-20 4-12-8-18-22-12-12 6-18 16-16 32z" />
+					</svg>
+				</div>
 			</section>
 
-			<!-- Seção: Como posso te ajudar? -->
-			<section id="como posso te ajudar?" class="section container">
-				<h2>Como posso te ajudar?</h2>
-				<p>Ofereço terapia individual e grupos terapêuticos para ajudar você a enfrentar desafios emocionais e psicológicos.</p>
-				<ul>
-					<li>Curso: Análise e desenvolvimento de sistemas — [UNINTER]</li>
-					<li>Idiomas: Português (nativo), Inglês (intermediário)</li>
-					<li>Formação: Mestrado completo (Nutrição) — [UFAL], 2023</li>
-				</ul>
+			<section id="como-posso-te-ajudar" class="help">
+				<div class="container">
+					<h2 class="reveal">Como posso te ajudar</h2>
+					<div class="help-grid">
+						<article class="help-card reveal">
+							<svg viewBox="0 0 48 48" aria-hidden="true">
+								<circle cx="24" cy="15" r="6" />
+								<path d="M12 36c1.5-7 6.5-11 12-11s10.5 4 12 11" />
+								<path d="M31 27c1.2-.8 3.2-.6 4.2.8.8 1.2.4 2.6-.8 3.6l-3.4 2.6-3.4-2.6c-1.2-1-1.6-2.4-.8-3.6 1-1.4 3-1.6 4.2-.8z" />
+							</svg>
+							<h3>Autoconhecimento</h3>
+							<p>Conhecer a si mesmo é um passo importante para viver de forma mais alinhada.</p>
+						</article>
+						<article class="help-card reveal">
+							<svg viewBox="0 0 48 48" aria-hidden="true">
+								<path d="M16 20c0-6 4-10 8-10s8 4 8 10c4 1 6 5 5 9-1 5-5 8-10 8h-6c-5 0-9-3-10-8-1-4 1-8 5-9z" />
+								<path d="M20 20c0-3 2-6 4-6" />
+								<path d="M18 26c2 2 4 2 6 0M24 26c2 2 4 2 6 0" />
+								<path d="M24 24v6" />
+							</svg>
+							<h3>Ansiedade e emoções</h3>
+							<p>Encontrar formas saudáveis de lidar com o que sente.</p>
+						</article>
+						<article class="help-card reveal">
+							<svg viewBox="0 0 48 48" aria-hidden="true">
+								<circle cx="24" cy="24" r="12" />
+								<path d="M24 12v4M24 32v4M12 24h4M32 24h4" />
+								<path d="M24 24l6-5" />
+								<circle class="dot" cx="24" cy="24" r="1.6" />
+							</svg>
+							<h3>Valores e escolhas</h3>
+							<p>Reconectar-se com o que é importante para você.</p>
+						</article>
+					</div>
+				</div>
 			</section>
 
-			<!-- Seção: Portfólio 
-			<section id="portfolio" class="section container">
-				<h2>Portfólio</h2>
-				<p>Abaixo alguns projetos e demonstrações:</p>
-				<ul class="projects">
-					<li><a href="#" target="_blank" rel="noopener">Projeto 1 — Portfólio pessoal</a></li>
-					<li><a href="https://annykppedrosa.github.io/DCNT/" target="_blank" rel="noopener">Projeto 2 — Site educacional de Doenças Crônicas Não Transmissíveis (em desenvolvimento)</a></li>
-				</ul>
-			</section>
-			-->
-
-			<!-- Seção: Contato com formulário -->
-			<section id="contato" class="section container">
-				<h2>Contato</h2>
-				<p>Entre em contato, responderei em breve.</p>
-				<form id="contactForm" novalidate>
-					<div class="field">
-						<label for="name">Nome</label>
-						<input type="text" id="name" name="name" required />
-						<span class="error" id="name-error" aria-live="polite"></span>
+			<section id="contato" class="contact">
+				<div class="container">
+					<div class="contact-band reveal">
+						<svg class="leaf leaf-band" viewBox="0 0 220 260" aria-hidden="true">
+							<path d="M36 236c28-46 52-86 118-168" />
+							<path d="M78 188c16-6 28 2 36-12 8-12-4-22-20-18-10 2-16 14-16 30z" />
+							<path d="M96 160c18-8 34 0 42-16 8-14-6-24-24-18-12 4-18 16-18 34z" />
+							<path d="M114 128c16-10 32-2 40-18 6-14-8-22-24-16-12 4-18 16-16 34z" />
+							<path d="M70 168c-16-2-26-16-20-28 6-10 20-8 28 4 6 8 4 18-8 24z" />
+							<path d="M92 132c-18 0-28-14-22-26 6-10 22-8 30 4 6 10 4 18-8 22z" />
+							<path d="M128 96c14-12 32-6 38-20 4-12-8-18-22-12-12 6-18 16-16 32z" />
+						</svg>
+						<h2>Vamos conversar?</h2>
+						<p>Se fizer sentido para você, entre em contato para saber mais sobre os atendimentos.</p>
 					</div>
 
-					<div class="field">
-						<label for="email">E-mail</label>
-						<input type="email" id="email" name="email" required />
-						<span class="error" id="email-error" aria-live="polite"></span>
-					</div>
-
-					<div class="field">
-						<label for="message">Mensagem</label>
-						<textarea id="message" name="message" rows="5" required></textarea>
-						<span class="error" id="message-error" aria-live="polite"></span>
-					</div>
-
-					<button id="submitBtn" type="submit">Enviar</button>
-					<p class="form-status" id="formStatus" aria-live="polite"></p>
-				</form>
+					<p class="address">Av. Menino Marcelo, 2000 — Serraria, Maceió - AL, 57046-000</p>
+				</div>
 			</section>
 		</main>
 
-		<!-- Rodapé -->
 		<footer class="site-footer">
-			<div class="container">© <span id="year"></span> Camily Pedrosa - CRP 15/8723.<br>
-				Av. Menino Marcelo, 2000 - Serraria, Maceió - AL, 57046-000 <br> 
-				Todos os direitos reservados.</div>
+			<div class="container footer-row">
+				<span class="footer-rule" aria-hidden="true"></span>
+				<p>© <span id="year"></span> Camily Pedrosa · Psicóloga | CRP 15/8723</p>
+				<span class="footer-rule" aria-hidden="true"></span>
+			</div>
 		</footer>
 
-		<!-- Script externo -->
 		<script src="js/script.js"></script>
 	</body>
 </html>
