@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Psicóloga Camily Pedrosa</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- Cabeçalho fixo com navegação por âncoras -->
+		<header class="site-header">
+			<nav class="navbar container">
+				<a class="logo" href="#">Psicóloga Camily Pedrosa - CRP15/8723</a>
+				<button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+				<ul class="nav-links">
+					<li><a href="#início">Início</a></li>
+					<li><a href="#sobre-mim">Sobre mim</a></li>
+					<li><a href="#como-posso-te-ajudar"></a>Como posso te ajudar?</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Seção: Início -->
+			<section id="Início" class="section container">
+				<h2>Início</h2>
+				<div class="profile-wrap container">
+					<img src="assets/Camily.jpeg" alt="Foto de perfil de Camily Pedrosa" class="profile-photo" />
+					<p class="mensagem">
+						Acredito que construir uma vida significativa não significa viver sem dor, mas permitir que os seus valores conduzam os seus passos.
+					</p>
+				</div>
+			</section>
+
+			<!-- Seção: Sobre mim -->
+			<section id="sobre mim" class="section container">
+				<h2>Sobre mim</h2>
+				<p>Sou psicóloga formada pela [Universidade]. Tenho experiência em [área de atuação] e me dedico a ajudar pessoas a superarem desafios emocionais e psicológicos.</p>
+			</section>
+
+			<!-- Seção: Como posso te ajudar? -->
+			<section id="como posso te ajudar?" class="section container">
+				<h2>Como posso te ajudar?</h2>
+				<p>Ofereço terapia individual e grupos terapêuticos para ajudar você a enfrentar desafios emocionais e psicológicos.</p>
+				<ul>
+					<li>Curso: Análise e desenvolvimento de sistemas — [UNINTER]</li>
+					<li>Idiomas: Português (nativo), Inglês (intermediário)</li>
+					<li>Formação: Mestrado completo (Nutrição) — [UFAL], 2023</li>
+				</ul>
+			</section>
+
+			<!-- Seção: Portfólio 
+			<section id="portfolio" class="section container">
+				<h2>Portfólio</h2>
+				<p>Abaixo alguns projetos e demonstrações:</p>
+				<ul class="projects">
+					<li><a href="#" target="_blank" rel="noopener">Projeto 1 — Portfólio pessoal</a></li>
+					<li><a href="https://annykppedrosa.github.io/DCNT/" target="_blank" rel="noopener">Projeto 2 — Site educacional de Doenças Crônicas Não Transmissíveis (em desenvolvimento)</a></li>
+				</ul>
+			</section>
+			-->
+
+			<!-- Seção: Contato com formulário -->
+			<section id="contato" class="section container">
+				<h2>Contato</h2>
+				<p>Entre em contato, responderei em breve.</p>
+				<form id="contactForm" novalidate>
+					<div class="field">
+						<label for="name">Nome</label>
+						<input type="text" id="name" name="name" required />
+						<span class="error" id="name-error" aria-live="polite"></span>
+					</div>
+
+					<div class="field">
+						<label for="email">E-mail</label>
+						<input type="email" id="email" name="email" required />
+						<span class="error" id="email-error" aria-live="polite"></span>
+					</div>
+
+					<div class="field">
+						<label for="message">Mensagem</label>
+						<textarea id="message" name="message" rows="5" required></textarea>
+						<span class="error" id="message-error" aria-live="polite"></span>
+					</div>
+
+					<button id="submitBtn" type="submit">Enviar</button>
+					<p class="form-status" id="formStatus" aria-live="polite"></p>
+				</form>
+			</section>
+		</main>
+
+		<!-- Rodapé -->
+		<footer class="site-footer">
+			<div class="container">© <span id="year"></span> Camily Pedrosa - CRP 15/8723.<br>
+				Av. Menino Marcelo, 2000 - Serraria, Maceió - AL, 57046-000 <br> 
+				Todos os direitos reservados.</div>
+		</footer>
+
+		<!-- Script externo -->
+		<script src="js/script.js"></script>
+	</body>
+</html>
